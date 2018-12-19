@@ -1,18 +1,18 @@
 <nav class="box-shadow">
     <ul>
-        <li><a href="/TESTLAMPP/myweb">Home</a></li>
+        <li><a href="/myweb">Home</a></li>
         {% if online %}
-        <li><a href="/TESTLAMPP/myweb/blog">Blog</a></li>
+        <li><a href="/myweb/blog">Blog</a></li>
         {% if accountType <= 1 %}
-        <li><a href="/TESTLAMPP/myweb/editor">Crear nuevo post</a></li>
+        <li><a href="/myweb/editor">Crear nuevo post</a></li>
         {% endif %}
         {% if accountType == 0 %}
-        <li><a href="/TESTLAMPP/myweb/admin/gestion/usuarios">Gestión de usuarios</a></li>
+        <li><a href="/myweb/admin/gestion/usuarios">Gestión de usuarios</a></li>
         {% endif %}
-        <li><a href="/TESTLAMPP/myweb/opciones">{{username}} - {{email}}</a></li>
-        <li><a href="/TESTLAMPP/myweb/logout">Logout</a></li>
+        <li><a href="/myweb/opciones">{{username}} - {{email}}</a></li>
+        <li><a href="/myweb/logout">Logout</a></li>
         {% else %}
-        <li><a href="/TESTLAMPP/myweb/login">Login / Registro</a></li>
+        <li><a href="/myweb/login">Login / Registro</a></li>
         {% endif %}
     </ul>
 </nav>
