@@ -1,0 +1,28 @@
+version: "2"
+services:
+  db:
+    image: mysql:5.7
+    volumes:
+      - "./db/mysql:/var/lib/mysql"
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: toor
+      MYSQL_DATABASE: mydatabase
+      #MYSQL_USER:
+      #MYSQL_PASSWORD:
+
+  server:
+    image: php:7-apache_myweb
+    build: 
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - "./www:/var/www/html/myweb"
+    links:
+      - db
+    ports:
+      - "80:80"
+      - "443:443"
+
+
+
