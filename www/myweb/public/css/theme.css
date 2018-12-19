@@ -282,5 +282,10 @@ table th {
 
 /* ARTICULO */
 #articulo article {
-    
+    padding: 3em;
+}
+
+#articulo article img {
+    margin: 0 auto;
+    display: block;
 }
