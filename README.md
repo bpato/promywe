@@ -4,6 +4,7 @@
 Instalación de docker.
 ```
 $ apt install docker docker-compose
+$ usermod -aG docker [usuario]
 ```
 Usuario y contraseña de la base de datos:
 ```
@@ -24,4 +25,14 @@ $ docker-compose up -d
 Detenemos los contenedores:
 ```
 $ docker-compose down
+```
+
+## PhpMyAdmin
+Descargamos phpmyadmin copiamos su carpeta en el directorio **www/**
+
+Modificamos el archivo **config.inc.php**
+```
+$cfg['blowfish_secret']
+$cfg['Servers'][$i]['host']
+$cfg['TempDir']
 ```
