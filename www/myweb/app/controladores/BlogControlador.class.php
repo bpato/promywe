@@ -21,7 +21,7 @@ class BlogControlador extends Controlador {
                 $parametros['articuloId'] = $this->parametros_ruta['articuloId'];
                 Vista::renderTemplate('private/articulo.html', $parametros);
             } else {
-                 throw new \Exception("La ruta no existe", 404);
+                 header('Location: /myweb/login');
             }
         }
 
