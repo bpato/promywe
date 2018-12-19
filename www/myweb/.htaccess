@@ -1,7 +1,7 @@
 # Todo el path pasado a la url, siempre que no sea un directorio o archivo real
 # se utilizara como parametros a index.php del directorio principal
 RewriteEngine On
-RewriteBase /TESTLAMPP/myweb/
+RewriteBase /myweb/
 # Que no sea una url de un archivo, directorio, enlace simbolico
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d

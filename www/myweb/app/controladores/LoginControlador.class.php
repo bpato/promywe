@@ -56,7 +56,7 @@ class LoginControlador extends Controlador {
             if ($valorPK = $users->login($em, $pw)) {
                 $usuario = new Usuario($users->getDatosUsuario($valorPK));
                 $_SESSION['usuario'] = serialize($usuario);
-                header('Location: /TESTLAMPP/myweb/');
+                header('Location: /myweb/');
             } else {
                 $parametros["errorMsg"]  =  $users->getError();
                 Vista::renderTemplate('public/login-registro.html', $parametros);
@@ -75,7 +75,7 @@ class LoginControlador extends Controlador {
             if($valorPK = $users->registro($un, $fn, $ln, $em1, $em2, $pw1, $pw2)){
                 $usuario = new Usuario($users->getDatosUsuario($valorPK));
                 $_SESSION['usuario'] = serialize($usuario);
-                header('Location: /TESTLAMPP/myweb/');
+                header('Location: /myweb/');
             } else {
                 $parametros["errorMsg"]  =  $users->getError();
                 Vista::renderTemplate('public/login-registro.html', $parametros);

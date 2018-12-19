@@ -70,7 +70,7 @@ class OpcionesControlador extends Controlador {
             }
             $usuario = new Usuario($users->getDatosUsuario($id));
             $_SESSION['usuario'] = serialize($usuario);
-            header('Location: /TESTLAMPP/myweb/opciones');
+            header('Location: /myweb/opciones');
         }
     }
 
