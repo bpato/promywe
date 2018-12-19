@@ -1,0 +1,286 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 02-Dec-2018, 22:24:32
+    Author     : bpato
+*/
+
+/* RESET STYLES */
+html, body, ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    color: #222;
+    text-decoration: none;
+}
+
+input {
+    background-color: transparent;
+    border: 0px;
+}
+
+/* */
+.box-shadow {
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+.base {
+    width: 1492px;
+    margin: 6em auto 0;
+}
+
+.boton {
+    color: #fff;
+    background-color: #222;
+    border-style: none;
+    cursor: pointer;
+    padding: 8px 16px;
+    margin: 16px 0px;
+    font-weight: 600;
+    transition: all 0.3s ease 0s;
+}
+
+.boton:hover {
+    color: #222;
+    background-color: #ccc;
+}
+
+.errorMessage {
+    color: red;
+}
+/* NAV BAR */
+
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    z-index: 5;
+    background-color: white;
+}
+
+nav > ul {
+    width: 1492px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    background-color: white;
+}
+
+nav > ul > li {
+    padding: 1.3em 16px;
+}
+
+/* HEADER */
+
+#home {
+    position: relative;
+    width: 1492px;
+    height: 700px;
+    margin: 3em auto 0;
+    overflow: hidden;
+}
+
+#home > img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.image-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+/* HOME */
+.widget {
+    margin-bottom: 6em;
+}
+.widget h2 {
+    border-bottom: 1px solid #ccc;
+}
+
+#posts {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: auto;
+    justify-content: center;
+    grid-gap: 15px 40px;
+}
+
+#posts>div {
+    position: relative;
+    cursor: pointer;
+}
+
+#posts>div>.titulo {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #222;
+    color: white;
+    padding: 8px 16px;
+}
+
+#posts img {
+    transition: all 0.3s ease 0s;
+}
+
+#posts img:hover {
+   filter: grayscale(1);
+}
+
+/* FOOTER */
+
+footer {
+    width: 100%;
+    padding: 3em 0px;
+    background-color: #222222;
+    color: white;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    margin-top: 2em;
+}
+
+footer>p {
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* GESTION DE USUARIOS */
+
+table {
+    width: 1492px;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 15px;
+}
+
+table tr:nth-child(even) {
+  background-color: #eee;
+}
+table tr:nth-child(odd) {
+  background-color: #fff;
+}
+table th {
+  color: white;
+  background-color: black;
+}
+
+/* FORMULARIOS */
+#formContainer label, #editor label {
+    display: block;
+}
+
+#formContainer input , #editor input{
+    width: 20%;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    padding: 8px;
+    margin: 8px 0px;
+}
+
+#registerForm, #loginForm {
+	display: none;
+}
+
+/* EDITOR */
+
+#editor textarea {
+    width: 80%;
+    height: 500px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+}
+
+/* OPCIONES */
+
+.optContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "username email" "name password";
+    grid-row-gap: 2em;
+}
+
+.optContainer input {
+    width: 40% !important;
+}
+
+#optsUsernameForm{
+    grid-area: username;
+}
+
+#optsNameForm{
+    grid-area: name;
+}
+
+#optsEmailForm{
+    grid-area: email;
+}
+
+#optsPasswordForm{
+    grid-area: password;
+}
+
+/* BLOG */
+#blog, #articulo {
+    background-color: white;
+    padding-bottom: 1em;
+}
+#blog h1 {
+    margin: 0px;
+    padding: 1.3em 16px;
+}
+
+#blog article {
+    margin: 0px;
+    padding: 1.3em 2em;
+}
+
+#blog article>a {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: auto;
+    grid-template-areas: "image header" "image text";
+}
+
+#blog article>a>header {
+    grid-area: header;
+    margin: 0px;
+    padding: 0 2em 0 3em;
+}
+
+#blog article>a>img {
+    grid-area: image;
+}
+
+#blog article>a>p {
+    grid-area: text;
+    margin: 0px;
+    padding: 0 2em 0 3em;
+}
+
+/* ARTICULO */
+#articulo article {
+    
+}
