@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block titulo %}Login / Registro{% endblock %}
+{% block body %}
+<div class="base">
+    <div id="formContainer">
+        <span class="errorMessage">{{ errorMsg }}</span>
+        <div>{{ include('public/form-login.html') }}</div>
+        <div>{{ include('public/form-registro.html') }}</div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            {% if online %}
+                $("#registerForm").show();
+            {% else %}
+                $("#loginForm").show();
+            {% endif %}
+            
+            $("#hideLogin").click(function() {
+                $(".errorMessage").empty();
+                $("#loginForm").hide();
+                $("#registerForm").show();
+            });
+
+            $("#hideRegister").click(function() {
+                $(".errorMessage").empty();
+                $("#loginForm").show();
+                $("#registerForm").hide();				
+            });
+        });
+    </script>
+</div>
+{% endblock %}

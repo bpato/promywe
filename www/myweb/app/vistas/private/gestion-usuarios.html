@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block titulo %}Administración y Gestión de Usuarios{% endblock %}
+{% block body %}
+<div class="base">
+    <h1>Administración y Gestión de Usuarios</h1>
+    <table>
+        <tr>
+            <th>id</th>
+            <th>accountType</th>
+            <th>username</th>
+            <th>firstName</th>
+            <th>lastName</th>
+            <th>email</th>
+            <th>singUpDate</th>
+            <th>lastLogin</th>
+            <th>profilePic</th>
+        </tr>
+        {% for usuario in usuarios %}
+        <tr>
+            <td>{{usuario.id}}</td>
+            <td>{{usuario.accountType}}</td>
+            <td>{{usuario.username}}</td>
+            <td>{{usuario.firstName}}</td>
+            <td>{{usuario.lastName}}</td>
+            <td>{{usuario.email}}</td>
+            <td>{{usuario.singUpDate}}</td>
+            <td>{{usuario.lastLogin}}</td>
+            <td>{{usuario.profilePic}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <div>
+        <button class="boton" id="btnAtras">Atras</button>
+        <button class="boton" id="btnAdelante">Adelante</button>
+    </div>
+</div>
+<script>
+    var pag = 1;
+    $(document).ready(function(){
+        var loadmore = function(pagina){
+            $.post('',{
+                accion: "loadmore",
+                page: pagina
+            },
+            function(data){
+                $(".base>table").html(data);
+            });
+        };
+            
+        $('#btnAtras').click(function(){
+            if(pag > 1) {
+                pag--;
+                loadmore(pag);
+            }
+        });
+        $('#btnAdelante').click(function(){
+            if (pag < {{ pagMax }}) {
+                pag++;
+                loadmore(pag);
+            }
+        });
+    });
+</script>
+{% endblock %}

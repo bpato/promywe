@@ -1,0 +1,26 @@
+<table>
+    <tr>
+        <th>id</th>
+        <th>accountType</th>
+        <th>username</th>
+        <th>firstName</th>
+        <th>lastName</th>
+        <th>email</th>
+        <th>singUpDate</th>
+        <th>lastLogin</th>
+        <th>profilePic</th>
+    </tr>
+    {% for usuario in usuarios %}
+    <tr>
+        <td>{{usuario.id}}</td>
+        <td>{{usuario.accountType}}</td>
+        <td>{{usuario.username}}</td>
+        <td>{{usuario.firstName}}</td>
+        <td>{{usuario.lastName}}</td>
+        <td>{{usuario.email}}</td>
+        <td>{{usuario.singUpDate}}</td>
+        <td>{{usuario.lastLogin}}</td>
+        <td>{{usuario.profilePic}}</td>
+    </tr>
+    {% endfor %}
+</table>

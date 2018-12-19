@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block titulo %}Opciones de usuario{% endblock %}
+{% block body %}
+<div class="base optContainer" id="formContainer">
+    <span class="errorMessage">{{ errorMsg }}</span>
+    <form id="optsUsernameForm" action="opciones/guardar" method="POST">
+        <h2>Username</h2>
+        <p>
+            <label for="optsUsername">Username: </label>
+            <input type="text" id="optsUsername" name="optsUsername" required value="{{usuario.username}}">
+        </p>
+        <button class="boton" type="submit" name="optionsButton">GUARDAR</button>
+    </form>
+
+    <form id="optsNameForm" action="opciones/guardar" method="POST">
+        <h2>FirstName and LastName</h2>
+        <p>
+            <label for="optsFirstname">First name: </label>
+            <input type="text" id="optsFirstname" name="optsFirstname" required value="{{usuario.firstName}}">
+        </p>
+        <p>
+            <label for="optsLastname">Last name: </label>
+            <input type="text" id="optsLastname" name="optsLastname" required value="{{usuario.lastName}}">
+        </p>
+        <button class="boton" type="submit" name="optionsButton">GUARDAR</button>
+    </form>
+
+    <form id="optsEmailForm" action="opciones/guardar" method="POST">
+        <h2>Email</h2>
+        <p>
+            <label for="optsEmail">Email: </label>
+            <input type="email" id="optsEmail" name="optsEmail" required value="{{usuario.email}}">
+        </p>
+        <button class="boton" type="submit" name="optionsButton">GUARDAR</button>
+    </form>
+
+    <form id="optsPasswordForm" action="opciones/guardar" method="POST">
+        <h2>Password</h2>
+        <p>
+            <label for="optsPasswordOld">Old Password: </label>
+            <input type="password" id="optsPasswordOld" name="optsPasswordOld" required>
+        </p>
+        <p>
+            <label for="optsPassword1">Password: </label>
+            <input type="password" id="optsPassword1" name="optsPassword1" required>
+        </p>
+        <p>
+            <label for="optsPassword2">Confirm password: </label>
+            <input type="password" id="optsPassword2" name="optsPassword2" required>
+        </p>
+        <button class="boton" type="submit" name="optionsButton">GUARDAR</button>
+    </form>
+</div>
+{% endblock %}

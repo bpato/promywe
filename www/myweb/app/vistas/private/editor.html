@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block titulo %}Publicar un nuevo artículo{% endblock %}
+{% block body %}
+<div class="base">
+    <h1>Publicar un nuevo artículo</h1>
+    <div>
+        <form id="editor" method="POST">
+            <input type="hidden" name="autor" value="{{id}}">
+            <p>
+                <label for="titulo">Titulo: </label>
+                <input type="text" id="titulo" name="titulo" required>
+            </p>
+            <p>
+                <textarea name="contenido"></textarea>
+            </p>
+            <button class="boton" name="editorButon">PUBLICAR</button>
+        </form>
+    </div>
+</div>    
+{% endblock %}
