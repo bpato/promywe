@@ -17,7 +17,7 @@ services:
       context: .
       dockerfile: ./Dockerfile
     volumes:
-      - "./www:/var/www/html/myweb"
+      - "./www:/var/www/html"
     links:
       - db
     ports:
