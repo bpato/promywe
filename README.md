@@ -26,6 +26,14 @@ Detenemos los contenedores:
 ```
 $ docker-compose down
 ```
+## Configuración de apache
+```
+<Directory />
+    Options Indexes FollowSymLinks
+    AllowOverride all
+    Require all granted
+</Directory>
+```
 
 ## Instalación de depedencias mediante composer:
 Instalamos composer.
