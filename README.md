@@ -27,8 +27,18 @@ Detenemos los contenedores:
 $ docker-compose down
 ```
 
+## Instalación de depedencias mediante composer:
+Instalamos composer.
+```
+$ apt install composer
+```
+Ejecutamos composer en la carpeta **./www/myweb**
+```
+$ composer install
+```
+
 ## PhpMyAdmin
-Descargamos phpmyadmin copiamos su carpeta en el directorio **www/**
+Descargamos phpmyadmin copiamos su carpeta en el directorio **./www/**
 
 Modificamos el archivo **config.inc.php**
 ```
