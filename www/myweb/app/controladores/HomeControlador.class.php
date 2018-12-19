@@ -23,6 +23,6 @@ class HomeControlador extends Controlador {
     }
     
     public function infoAccion() {
-        Vista::render('test/info.php');
+        Vista::render('private/info.php');
     }
 }
